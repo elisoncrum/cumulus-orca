@@ -8,6 +8,6 @@ moto[sqs]==2.2.7
 psycopg2-binary==2.8.6
 
 ## Application libraries
-cumulus-message-adapter-python==1.2.1
+cumulus-message-adapter-python==1.2.2
 SQLAlchemy==1.4.11
 ../../shared_libraries[all]

@@ -46,21 +46,19 @@ bamboo deployment plan.
 
 #### Creating a Bamboo deployment plan
 
-1. In the ORCA project (https://ci.earthdata.nasa.gov/browse/ORCA-OI), click
-   `Actions -> Configure Plan` at the top right.
-2. Scroll to the bottom of the branch list in the bottom left and select
-   `Create Plan Branch`.
-3. Add the values in that list. Choose a display name that makes it very clear 
-   this is a deployment branch plan. Release (branch name) seems to work well. 
-   Make sure you enter the correct branch name.
-4. Important Deselect Enable Branch - if you do not do this, it will immediately
-   fire off a build.
-5. Do Immediately On the Branch Details page, enable 'Change Trigger'. Set the 
+1. In the ORCA project (https://ci.earthdata.nasa.gov/browse/ORCA-OI), next to the "Plan branch", click the plus icon.
+2. Choose the `Branch name` of the created release branch.
+3. Important: Deselect Enable Branch - if you do not do this, it will immediately fire off a build.
+4. Click `Create`.
+5. Enable 'Change Trigger'. Set the 
    Trigger type to manual, and this will prevent commits to the branch from 
    triggering the build plan. You should have been redirected to the 'Branch 
    Details' tab after creating the plan. If not, navigate to the branch from
    the list where you clicked 'Create Plan Branch' in the previous step.
-6. Go to the Variables tab. Ensure that you are on your branch plan and not the
+6. Choose a display name that makes it very clear 
+   this is a deployment branch plan. Release (branch name) seems to work well. 
+   Double-check that the `Plan branch` is correct.
+7. Go to the Variables tab. Ensure that you are on your branch plan and not the
    master plan: You should not see a large list of configured variables, but 
    instead a dropdown allowing you to select variables to override, and the tab 
    title will be Branch Variables. Set a DEPLOYMENT variable appropriate for the
@@ -68,8 +66,8 @@ bamboo deployment plan.
    except in special cases such as incompatible backport branches. Then set:
      * ORCA_VERSION: `<version number>`
      * RELEASE_FLAG: true
-7. Enable the branch from the 'Branch Details' page.
-8. Run the branch using the 'Run' button in the top right.
+8. Enable the branch from the 'Branch Details' page.
+9. Run the branch using the 'Run' button in the top right.
 
 Bamboo will build and run unit tests against that tagged release.
 

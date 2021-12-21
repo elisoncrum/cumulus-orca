@@ -61,9 +61,8 @@ bamboo deployment plan.
 7. Go to the Variables tab. Ensure that you are on your branch plan and not the
    master plan: You should not see a large list of configured variables, but 
    instead a dropdown allowing you to select variables to override, and the tab 
-   title will be Branch Variables. Set a DEPLOYMENT variable appropriate for the
-   release (defaults to last committer). This should be cumulus-from-npm-tf 
-   except in special cases such as incompatible backport branches. Then set:
+   title will be Branch Variables.
+   Set:
      * ORCA_VERSION: `<version number>`
      * RELEASE_FLAG: true
 8. Enable the branch from the 'Branch Details' page.

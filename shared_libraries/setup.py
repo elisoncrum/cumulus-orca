@@ -28,7 +28,7 @@ def get_version():
 
 
 # General installation requirements
-install_requirements = ["cumulus-message-adapter-python==1.2.2"]
+install_requirements = ["cumulus-message-adapter-python==1.2.2", "cumulus-message-adapter==1.3.1"]
 
 
 # Additional library dependencies
